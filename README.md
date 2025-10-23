@@ -36,8 +36,8 @@ graph TD
 ```
 
   * **Synthesis:** Converts your Verilog code into a network of standard logic gates (like AND, OR, NOT) and flip-flops.
-  * **Floorplanning (You did this\!):** Defines the chip's physical dimensions, allocates space for different blocks, and plans the power grid. It's like creating the blueprint of a house.
-  * **Placement (You did this\!):** Takes the thousands of standard cells from the netlist and places them in rows within the floorplan, aiming for the best possible performance.
+  * **Floorplanning :** Defines the chip's physical dimensions, allocates space for different blocks, and plans the power grid. It's like creating the blueprint of a house.
+  * **Placement :** Takes the thousands of standard cells from the netlist and places them in rows within the floorplan, aiming for the best possible performance.
 
 By completing these steps, you are taking the first crucial leap from pure logic to a physical reality, directly impacting the chip's final speed, size, and power consumption.
 
