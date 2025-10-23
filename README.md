@@ -1,4 +1,4 @@
-# 🚀 OpenROAD Flow: From RTL to Placement - A Complete Guide
+## 🚀 OpenROAD Flow: From RTL to Placement
 
 This guide provides a detailed walkthrough of setting up the OpenROAD-flow-scripts environment, running a digital design from RTL to the placement stage, and visualizing the results. It also documents common installation errors and their solutions, offering a complete record of the VLSI physical design process for the `gcd` (Greatest Common Divisor) example design.
 
@@ -125,6 +125,7 @@ make DESIGN_CONFIG=./designs/sky130hd/gcd/config.mk place
 ```
 
 This command automatically executes synthesis, floorplanning, and then placement, stopping before Clock Tree Synthesis.
+> <img width="1920" height="1080" alt="Screenshot from 2025-10-23 12-23-25" src="https://github.com/user-attachments/assets/d3c6e1b4-20ed-40e5-824c-07cfd26f91b2" />
 > <img width="1920" height="1080" alt="Screenshot from 2025-10-23 11-14-04" src="https://github.com/user-attachments/assets/d396602f-d212-46ac-b541-133d16838bb6" />
 -----
 
