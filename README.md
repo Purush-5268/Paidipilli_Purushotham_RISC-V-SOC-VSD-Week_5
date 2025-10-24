@@ -15,23 +15,25 @@ graph TD
     subgraph "Phase 1: Inputs"
         A[Gate-Level Netlist <br/> from Yosys synthesis];
         B[Sky130 Physical Libraries <br/> .lef & .lib files];
+        C[Design Configuration <br/> config.mk];
     end
 
     subgraph "Phase 2: Physical Design "
-        A --> C{OpenROAD Tool};
-        B --> C;
-        C --> D(1. Floorplanning);
-        D --> E(2. Placement);
-        E --> F[Placed Design Layout <br/> .def & .odb files];
+        A --> D{OpenROAD Tool};
+        B --> D;
+        C --> D;
+        D --> E(1. Floorplanning <br/> Creates die area & power grid);
+        E --> F(2. Placement <br/> Arranges standard cells);
+        F --> G[Placed Design Layout <br/> .def & .odb files];
     end
 
     subgraph "Phase 3: Visual Analysis"
-        F --> G{Visualization};
-        B --> G;
-        G --> H["OpenROAD GUI <br/> (Primary Tool)"];
-        G --> I["KLayout <br/> (Alternative Viewer)"];
-        H --> J[✅ Visual Verification];
-        I --> J;
+        G --> H{Visualization};
+        B --> H;
+        H --> I["OpenROAD GUI <br/> (Primary Tool)"];
+        H --> J["KLayout <br/> (Alternative Viewer)"];
+        I --> K[✅ Visual Verification];
+        J --> K;
     end
 ```
 
